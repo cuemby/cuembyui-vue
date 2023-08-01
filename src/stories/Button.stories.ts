@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
-
+import type {Meta, StoryFn, StoryObj} from '@storybook/vue3';
+//import { withDesign } from '@storybook/addon-designs';
 import Button from './Button.vue';
 
 // More on how to set up stories at: https://storybook.js.org/docs/vue/writing-stories/introduction
@@ -14,7 +14,15 @@ const meta = {
     onClick: { action: 'clicked' },
   },
   args: { primary: false }, // default value
-} satisfies Meta<typeof Button>;
+  //decorators: [withDesign],
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/hLwGS1KlNxq2PiDMCEmJds',
+    },
+  }
+} as Meta<typeof Button>;
+
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -28,6 +36,12 @@ export const Primary: Story = {
     primary: true,
     label: 'Button',
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/hLwGS1KlNxq2PiDMCEmJds',
+    },
+  }
 };
 
 export const Secondary: Story = {
