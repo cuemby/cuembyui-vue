@@ -18,7 +18,7 @@ const meta = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/file/hLwGS1KlNxq2PiDMCEmJds',
+      url: 'https://www.figma.com/file/hLwGS1KlNxq2PiDMCEmJds/Cuemby-Cloud-Platform-Components-(Storybook-integration)?type=design&node-id=42-20014&mode=design&t=iwWjIR13GRyLfnwp-4',
     },
   }
 } as Meta<typeof Button>;
